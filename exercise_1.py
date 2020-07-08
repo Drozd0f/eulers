@@ -2,11 +2,15 @@
 
 # Найдите сумму всех чисел меньше 1000, кратных 3 или 5.
 
-sum = 0
-for i in range(1, 1001):
-    if i % 3 == 0:
-        sum += i
-    if i % 5 != i % 3 and i % 5 == 0:
-        sum += i
 
-print(sum)
+def exercise_1(numbers):
+    _sum = 0
+    for i in range(1, numbers + 1):
+        if i % 3 == 0:
+            _sum += i
+        if i % 5 != i % 3 and i % 5 == 0:
+            _sum += i
+    return _sum
+
+
+print(exercise_1(1000))
