@@ -2,13 +2,16 @@
 
 # Найдите сумму всех чисел меньше 1000, кратных 3 или 5.
 
-i = 1
-a = []
 
-while i < 1000:
-    if i % 3 == 0 or i % 5 == 0:
-        a.append(i)
-    i += 1
+def exercise_4(limit):
+    i = 1
+    a = []
 
-print(a)
-print(sum(a))
+    while i < limit:
+        if i % 3 == 0 or i % 5 == 0:
+            a.append(i)
+        i += 1
+    return sum(a)
+
+
+print(exercise_4(1000))

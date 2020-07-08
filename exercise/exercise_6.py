@@ -9,17 +9,20 @@
 
 def add(n, k):
     a = []
-    # b = []
-    i = 0
-    j = 1
 
     for i in range(1, k + 1):
         a.append(i ** n)
+    print("Сумма первая =", sum(a))
+
+    i = 0
+    j = 1
 
     while j <= k:
         suma = (i + j) ** n
         i = i + j
         j += 1
+
+    print("Сумма вторая =", suma)
 
     while True:
         if suma > sum(a):
@@ -28,10 +31,7 @@ def add(n, k):
         else:
             c = sum(a) - suma
             break
-    print(c)
+    return c
 
 
-n = int(input())
-k = int(input())
-
-add(n, k)
+print(add(2, 10))
