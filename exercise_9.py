@@ -10,9 +10,9 @@ while True:
     for a in range(1, b):
         c = (a ** 2 + b ** 2) ** (1 / 2)
         if c == int(c):
-            #d.append(a)
-            #d.append(b)
-            #d.append(c)
+            # d.append(a)
+            # d.append(b)
+            # d.append(c)
             summa = a + b + c
             d.append(summa)
             if summa == 1000:

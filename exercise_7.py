@@ -38,5 +38,3 @@ while True:
 
     else:
         dead_inside += 1
-
-

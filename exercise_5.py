@@ -2,6 +2,6 @@
 
 # Какое самое маленькое число делится нацело на все числа от 1 до 20?
 
-from functools import reduce
+# from functools import reduce
 # 2 3 4 5 6 7 8 9 10
 # 2 3 2 5 1 7 2 3 1
