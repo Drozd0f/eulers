@@ -5,15 +5,9 @@ name: Eulers project
 on:
   push:
     branches: 
-      - '*'         # matches every branch that doesn't contain a '/'
-      - '*/*'       # matches every branch containing a single '/'
-      - '**'        # matches every branch
-      - 'master'
-  pull_request:
-    branches: 
-      - '*'         # matches every branch that doesn't contain a '/'
-      - '*/*'       # matches every branch containing a single '/'
-      - '**'        # matches every branch
+      - '*'
+      - '*/*'
+      - '**'
       - 'master'
 jobs:
   build:
@@ -26,8 +20,10 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.8
+    - name: Set up flake
+      run: |
+        pip install flake8
     - name: Lint with flake8
       run: |
-        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 .
 
