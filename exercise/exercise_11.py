@@ -14,4 +14,29 @@
 
 # Как мы видим, 28 - первое треугольное число, у которого более пяти делителей.
 
-# Каково первое треугольное число, у которого более пятисот делителей?
+# Каково первое треугольное число, у которого более десити делителей?
+
+
+def exercise_11(a):
+
+    n = 1
+    _sum = 0
+    b = []
+    c = True
+    while c:
+        b.clear()
+        _sum += n
+        for k in range(1, _sum + 1):
+            if _sum % k == 0:
+                b.append(k)
+                if len(b) == a and b[-1] == _sum:
+                    print("b =", b)
+                    print("Число =", _sum)
+                    c = False
+                    return _sum
+        n += 1
+        if n == 1000:
+            return "Chisla net"
+
+
+print(exercise_11(10))
