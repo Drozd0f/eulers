@@ -3,23 +3,20 @@
 # Например, 3^2 + 4^2 = 9 + 16 = 25 = 5^2.
 # Существует только одна тройка Пифагора, для которой a + b + c = 1000.
 # Найдите произведение abc.
-summa = 0
+from math import sqrt
+a = 1
 b = 2
-d = []
 while True:
-    for a in range(1, b):
-        c = (a ** 2 + b ** 2) ** (1 / 2)
-        if c == int(c):
-            #d.append(a)
-            #d.append(b)
-            #d.append(c)
-            summa = a + b + c
-            d.append(summa)
-            if summa == 1000:
-                print(a, "+", b, "+", c)
-                print(a * b * c)
-                break
-    if c >= 500:
-        break
+    while a < b:
+        c = sqrt(a ** 2 + b ** 2)
+        if int(a + b + c) == a + b + c and a + b + c == 1000:
+            print(a, "+", b, "+", c)
+            print("Их произведение равно", a * b * c)
+            break
+        else:
+            a += 1
+    a = 1
     b += 1
-print(d)
+    if b >= 500:
+        break
+
