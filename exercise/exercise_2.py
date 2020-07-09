@@ -4,14 +4,17 @@
 
 # Найдите сумму всех четных элементов ряда Фибоначчи, которые не превышают 100.
 
-n = 1
-i = 2
-a = []
-while n <= 100:
-    _sum = n + i
-    if n % 2 == 0:
-        a.append(n)
-    n = i
-    i = _sum
-print(a)
-print(sum(a))
+
+def exercise_2(limit):
+    n = 1
+    i = 2
+    a = []
+    while n <= limit:
+        _sum = n + i
+        if n % 2 == 0:
+            a.append(n)
+        n, i = i, _sum
+    return sum(a)
+
+
+print(exercise_2(100))
