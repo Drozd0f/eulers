@@ -19,4 +19,3 @@ while True:
     b += 1
     if b >= 500:
         break
-
